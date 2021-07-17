@@ -51,8 +51,11 @@ class EasyShare {
     }
 }
 
-let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjY4MGZjMTNkZWEwMjhhODJkM2I4NjcxZDJlN2NhZjMyZTM0NmU3ZjkifQ.eyJpc3MiOiJodHRwczovL2Z1bGxjcmVhdGl2ZS5mdWxsYXV0aC5jb20iLCJpYXQiOjE2MjY1MTgxMzUsInByb2pfaWQiOiJzZXRtb3JlIiwidHlwZSI6InVzZXIiLCJzdWIiOiJmYjU3OTFmZi1lYzUyLTRiYjgtOWI0Ni0wNzlmZGI1ZGU2OTEiLCJleHAiOjE2MjcxMjI5MzUsImp0aSI6IjQ3MzA1MkZmOG5vVVozbzQifQ.ow7hsxoQ2N1NQQ7x-pTvfgB4G1qvtOfWUtrmbY03oErW6b-EAsLDatwvxvChTb1itnejsR24l2q-mBmQdEet37lLelv6RiJCSZqXVp52fxlxk7kStOPDt4-wkZwAb3caIDgL2-8J6zE4D-fephXu-llhtOghnWXf58oFwJlEgqup1oe7i158ZeW6J6n_05kpEQT1DNw2hwFq_CAqJw5KBvCEPxg09e_guHf80pwWwuMcvMx3eQVnSIdJ9HFr51tzImkbR9aWqtj-ao0F-dkCCLGnWzhQYvPZr1bhFClrgdp6Q5GWaxN0MlddSEf0KbH16TFqztAuz40WXa7Yn0begA";
-let easyshareObject = new EasyShareBuilder("live","SEN42",accessToken)
+let accessToken = "Your token "
+let merchantId = "Your merchant id"
+let envirment = "The envirment"
+
+let easyshareObject = new EasyShareBuilder("live",merchantId,accessToken)
 new EasyShare(easyshareObject).init(null);
 
 
