@@ -7,28 +7,19 @@
     <title>easyshare sharing </title>
 </head>
 <body>
-
+<script src="main.js"></script>
+   
    <script>
-      // (async function () {
-      //  const easyshare = await import("easyshare/Index");
+     
 
-      //    await window.__config({
-      //       headers: {
-      //          'Accept': 'application/json',
-      //          'Content-Type': 'application/json',
-      //          'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjY4MGZjMTNkZWEwMjhhODJkM2I4NjcxZDJlN2NhZjMyZTM0NmU3ZjkifQ.eyJpc3MiOiJodHRwczovL2Z1bGxjcmVhdGl2ZS5mdWxsYXV0aC5jb20iLCJpYXQiOjE2MjU2MzYxNjcsInByb2pfaWQiOiJzZXRtb3JlIiwidHlwZSI6InVzZXIiLCJzdWIiOiI0YTUwNjExNS1jYWM5LTRkMzUtYWQ1MS0zNzE5Nzk4NjM1ZTEiLCJleHAiOjE2MjYyNDA5NjcsImp0aSI6Ijc0NmMwOHB0NFVJMlFXakYifQ.FsaPtanfMbRUuNjXwip6uODk-0OqCPYT-KydO46nXXxlD_GSMaqmlgbyOYXnjrf08SUtDNa1q9BwQKnKwyq374SZr8Uhm1aNxB31NE9aT9DZCPG-vL5H6qob8JGgNnICyrj9QoUI_HncVbCrToXMnL5nZzkTimscfIEIjJ5_hF_DeQ9MHwoMDN4uO9WNXSrfGHxC5QlAquKcb7MdM8ka85X-HTF5Qj4ZcASW_55WTmbwUn-GlXCQ8dzBmqiBX8Hx3cxkl4bUGH5oQazvWoQRP73qPlNwoPdfldRU1Y3ffMJQg0Pfwj8ykrA8wLuZbXVwOcmuePdooEgowuilDzLtzQ',
-      //       },
-      //       isDev: false,
-      //       // baseUrl: "https://auth-dot-services-dot-schedulingengine.uc.r.appspot.com/schedule/v3"
-      //       // baseUrl: "https://auth-dot-services-dot-schedulingengine.uc.r.appspot.com/api/v1"
-      //       // baseUrl: "https://20210512-dot-services-dot-staging-schedulingengine.el.r.appspot.com/api/v1"
+let accessToken = ""
+let merchantId = "SEN42"
+let envirment = "live"
 
-      //       // Latest Endpoint
-      //       baseUrl: "https://hook-dot-services-dot-schedulingengine.uc.r.appspot.com"
-      //    }, (ack) => {
-      //       console.log(ack);
-      //    })
-      // }())
+let easyshareObject = new EasyShareBuilder("live",merchantId,accessToken)
+new EasyShare(easyshareObject).init(null);
+
+
    </script>
 </body>
 </html>

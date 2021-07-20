@@ -1,4 +1,4 @@
-export class EasyShareBuilder{
+ class EasyShareBuilder{
     constructor(envirment,key, token){
         this.envirment = envirment;
         this.merchatId = key;
@@ -49,4 +49,7 @@ export class EasyShareBuilder{
    }
   
 }
-
+global.EasyShareBuilder = EasyShareBuilder
+export {
+    EasyShareBuilder
+}
