@@ -20,5 +20,6 @@ All we have to do is place the token and merchatId which supposed to received fr
       let merchantId = "Your merchant id"
       let envirment = "live/staging". // whether we are deploying the build on staging or live.
 
-      let easyshareObject = new EasyShareBuilder("live",merchantId,accessToken)
+      
+      let easyshareObject =  new EasyShareBuiler(envirment,merchantId,accessToken).addIsDeleted(true).build();
       new EasyShare(easyshareObject).init(null);
