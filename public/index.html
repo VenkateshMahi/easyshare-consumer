@@ -7,18 +7,13 @@
     <title>easyshare sharing </title>
 </head>
 <body>
-<script src="main.js"></script>
-   
+   <script src="main.js"></script>
    <script>
-     
 
-let accessToken = ""
-let merchantId = "SEN42"
-let envirment = "live"
 
-let easyshareObject = new EasyShareBuilder("live",merchantId,accessToken)
-new EasyShare(easyshareObject).init(null);
-
+ let easyshareObject =  new EasyShareBuiler(envirment,merchantId,accessToken).addIsDeleted(true).build();
+ console.log(easyshareObject)
+ new EasyShare(easyshareObject).init(null);
 
    </script>
 </body>

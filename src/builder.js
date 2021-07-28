@@ -1,8 +1,13 @@
- class EasyShareBuilder{
-    constructor(envirment,key, token){
-        this.envirment = envirment;
-        this.merchatId = key;
-        this.token = token;
+ class EasyShare{
+    constructor(builder){
+        this.envirment = builder.envirment;
+        this.merchatId = builder.key;
+        this.token = builder.token;
+        this.isDeleted = builder.isDeleted || false;
+        this.myBooking = builder.myBooking || true;
+        this.limit = builder.limit || 50;
+        this.cursor = builder.cursor || null;
+        this.class= builder.class || true;
     }
     addIsDeleted(isDeleted){
         this.isDeleted = isDeleted;
@@ -26,30 +31,68 @@
         return this;
     }
 
-   build(){
-       if(this.hasOwnProperty("isDeleted") && !this.isDeleted){
-            throw new Error("isDeleted parameter missing")
+ }
+ 
+ class  EasyShareBuiler{
 
+
+
+    constructor(envirment,key,token ){
+        this.envirment = envirment;
+        this.key = key;
+        this.token = token;
+    }
+    addIsDeleted(isDeleted){
+        this.isDeleted = isDeleted;
+        return this;
+    }
+    addMybooking(myBooking){
+        this.myBooking = myBooking;
+        return this;
+    }
+    addLimit(limit){
+        this.limit = limit;
+        return this;
+    }
+    addCursor(cursor){
+        this.cursor = cursor;
+        return this;
+    }
+    addClass(classpros){
+        this.class = classpros;
+        return this;
+    }
+    validate(props){
+        if(this.hasOwnProperty(props) && this[props] == undefined){
+            return true;
         }
-    
-        if(this.hasOwnProperty('myBooking') && !this.myBooking){
+    }
+    build(){
+            
+        if(this.validate("isDeleted")){
+            throw new Error("isDeleted parameter missing")
+        }
+        if(this.validate('myBooking')){
             throw new Error("myBooking parameter is missing")
         }
-        if(this.hasOwnProperty("limit")&& !this.limit){
+        if(this.validate("limit")){
             throw new Error ("limit parameter is missing")
 
         }
   
-        if(this.hasOwnProperty("cursor") && !this.cursor){
+        if(this.validate("cursor")){
             throw new Error("cursor parameter is missing")
        }
-        if(this.hasOwnProperty("class") && !this.class)
-    
-       return new EasyShareBuilder(this.envirment, this.key, this.token);
-   }
-  
-}
-global.EasyShareBuilder = EasyShareBuilder
+        if(this.validate("class")){
+            throw new Error("class parameter is missing")
+
+        }
+        return new EasyShare(this);
+    }
+
+ }
+
+global.EasyShareBuiler = EasyShareBuiler;
 export {
-    EasyShareBuilder
+    EasyShareBuiler
 }

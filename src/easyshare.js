@@ -1,4 +1,3 @@
-import { EasyShareBuilder } from "./builder";
 const stagingUrl = "https://staging-dot-services-dot-schedulingengine.appspot.com";
 const liveUrl = "https://hook-dot-services-dot-schedulingengine.uc.r.appspot.com";
 
@@ -34,13 +33,13 @@ const liveUrl = "https://hook-dot-services-dot-schedulingengine.uc.r.appspot.com
     }
     createEasyshare(element){
         const service_wrapper = document.createElement("service-wrapper");
-        service_wrapper.setAttribute("isDeleted",false);
-        service_wrapper.setAttribute("cursor","");
-        service_wrapper.setAttribute("limit","50")
-        service_wrapper.setAttribute("class","true")
+        service_wrapper.setAttribute("isDeleted",this.easyshareObject.isDeleted);
+        service_wrapper.setAttribute("cursor",this.easyshareObject.cursor);
+        service_wrapper.setAttribute("limit",this.easyshareObject.limit);
+        service_wrapper.setAttribute("class",this.easyshareObject.class);
         
-        service_wrapper.setAttribute("merchandId",this.easyshareObject.merchatId)
-        service_wrapper.setAttribute("myBooking","true")
+        service_wrapper.setAttribute("merchandId",this.easyshareObject.merchatId);
+        service_wrapper.setAttribute("myBooking",this.easyshareObject.myBooking);
         if(element){
             element.appendChild(service_wrapper);
         }
