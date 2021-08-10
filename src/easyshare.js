@@ -1,4 +1,4 @@
-const stagingUrl = "https://staging-dot-services-dot-schedulingengine.appspot.com";
+const stagingUrl = "https://services-dot-staging-schedulingengine.el.r.appspot.com";
 const liveUrl = "https://hook-dot-services-dot-schedulingengine.uc.r.appspot.com";
 
 
@@ -9,6 +9,7 @@ const liveUrl = "https://hook-dot-services-dot-schedulingengine.uc.r.appspot.com
     }
     
   async init (element){
+      let url = this.easyshareObject.envirment=== "live"?liveUrl:stagingUrl;
       
         try{   
              const easyshare = await import("easyshare/App");
@@ -21,7 +22,7 @@ const liveUrl = "https://hook-dot-services-dot-schedulingengine.uc.r.appspot.com
                 isDev: false,
                 // Latest Endpoint
                 
-                baseUrl: liveUrl
+                baseUrl: url
              }, (ack) => {
                 console.log(ack);
                 this.createEasyshare(element)

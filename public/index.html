@@ -9,10 +9,12 @@
 <body>
    <script src="main.js"></script>
    <script>
+    
 
+  let accessToken = "";
+  let merchantId = "";
 
- let easyshareObject =  new EasyShareBuiler(envirment,merchantId,accessToken).addIsDeleted(true).build();
- console.log(easyshareObject)
+ let easyshareObject =  new EasyShareBuiler("live",merchantId,accessToken).addIsDeleted(false).build();
  new EasyShare(easyshareObject).init(null);
 
    </script>
