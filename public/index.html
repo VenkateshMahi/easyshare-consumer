@@ -11,10 +11,10 @@
    <script>
     
 
-  let accessToken = "";
-  let merchantId = "";
+  let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImQxNzJhY2MxMDJjMGRhYWQzNThiZmM5ZDYwZWEyMWJhOWVjY2I2ZWUifQ.eyJpc3MiOiJodHRwczovL2FueXdoZXJlLnN0YWdpbmcuYW55d2hlcmVhdXRoLmNvbSIsImlhdCI6MTYyOTQ0ODY3NCwicHJval9pZCI6InNldG1vcmUiLCJ0eXBlIjoidXNlciIsInN1YiI6ImRjM2UxMzhkLTE5OGEtNDYxYi05NjQ4LTE2MmM1YmRkYmI1YSIsImV4cCI6MTYzMDA1MzQ3NCwianRpIjoiMzhiYTEzYnRqTEpETUNPNSJ9.OZbch4LNMvSj_9k22emkCz8JIqx9gTAKGPr4D7xWMcXaqivwJlhMvNc7kcPt8CT8QcnjriwhA5CmUfNwkdGlpntfR_FSltRJxAh0z53xkbHWLQayL0mIQ8cwAdNVOkcFfQJyxWvtqC8EL6U6IUwbO_Zw9g5hMJcfx2guN7Gocz4SYENt7r4Kznpssj2vnTqYKEyzspI8kPXwd6lW4MSOxONdUoesPhx_W3q2dQi27I03LE662A_wZ3QBoojiiYGNSWB8HINMVvYIAmBZ-jtI7A5-O3nY3pP5U2-rmphA88_PqBAAD-Et8c0evPCAwC2F5MK8s4evluRY6I0tmottYA";
+  let merchantId = "dc3e138d-198a-461b-9648-162c5bddbb5a";
 
- let easyshareObject =  new EasyShareBuiler("live",merchantId,accessToken).addIsDeleted(false).build();
+ let easyshareObject =  new EasyShareBuiler("stage",merchantId,accessToken).addIsDeleted(false).build();
  new EasyShare(easyshareObject).init(null);
 
    </script>
