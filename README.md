@@ -14,7 +14,15 @@
      
 }
 
-All we have to do is place the token and merchatId which supposed to received from run time
+Why we created this - As we found most team do not use the latest version of webpack(greater than 5). This pacakge would help build a bundle file which internally 
+pull the change from easyshare. 
+
+Steps to create bundle -- 
+          cd easyshare-consumer // change directory to the project dir
+         npm i // install dependeciens 
+         npm run build // This would create the bundle file 
+ 
+Copy the bundle file from dist folder and then  all we have to do is place the token and merchatId which supposed to received from run time
       
       let accessToken = "Your token "
       let merchantId = "Your merchant id"
