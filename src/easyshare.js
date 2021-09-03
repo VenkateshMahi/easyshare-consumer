@@ -1,4 +1,4 @@
-const stagingUrl = "https://services-dot-staging-schedulingengine.el.r.appspot.com";
+const stagingUrl = "https://easyshare-dot-services-dot-staging-schedulingengine.el.r.appspot.com";
 const liveUrl = "https://hook-dot-services-dot-schedulingengine.uc.r.appspot.com";
 
 
@@ -41,6 +41,8 @@ const liveUrl = "https://hook-dot-services-dot-schedulingengine.uc.r.appspot.com
         
         service_wrapper.setAttribute("merchandId",this.easyshareObject.merchatId);
         service_wrapper.setAttribute("myBooking",this.easyshareObject.myBooking);
+        service_wrapper.setAttribute("isExpendable",this.easyshareObject.isExpendable);
+
         if(element){
             element.appendChild(service_wrapper);
         }
