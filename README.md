@@ -18,7 +18,8 @@ Why we created this - As we found most team do not use the latest version of web
 pull the change from easyshare. 
 
 Steps to create bundle -- 
-          cd easyshare-consumer // change directory to the project dir
+
+         cd easyshare-consumer // change directory to the project dir
          npm i // install dependeciens 
          npm run build // This would create the bundle file 
  
