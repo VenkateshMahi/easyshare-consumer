@@ -21,7 +21,7 @@ Steps to create bundle --
 
          cd easyshare-consumer // change directory to the project dir
          npm i // install dependeciens 
-         npm run build // This would create the bundle file 
+         npm run build // This would create the bundle file  insdie dist folder 
  
 Copy the bundle file from dist folder and then  all we have to do is place the token and merchatId which supposed to received from run time
       
@@ -30,4 +30,8 @@ Copy the bundle file from dist folder and then  all we have to do is place the t
       let envirment = "live/staging". // whether we are deploying the build on staging or live.
 
        let easyshareObject =  new EasyShareBuiler("stage",merchantId,accessToken).addIsDeleted(false).addIsExpendable(true).build();
+       
        new EasyShare(easyshareObject).init(null);
+addExpandable(true) -- enable the edit flow in the view
+addIsDeleted(false)  -- Only fetch active services and classes 
+
