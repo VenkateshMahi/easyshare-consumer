@@ -33,5 +33,6 @@ Copy the bundle file from dist folder and then  all we have to do is place the t
        
        new EasyShare(easyshareObject).init(null);
 addExpandable(true) -- enable the edit flow in the view
+
 addIsDeleted(false)  -- Only fetch active services and classes 
 
