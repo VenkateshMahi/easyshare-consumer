@@ -29,6 +29,5 @@ Copy the bundle file from dist folder and then  all we have to do is place the t
       let merchantId = "Your merchant id"
       let envirment = "live/staging". // whether we are deploying the build on staging or live.
 
-      
-      let easyshareObject =  new EasyShareBuiler(envirment,merchantId,accessToken).addIsDeleted(true).build();
-      new EasyShare(easyshareObject).init(null);
+       let easyshareObject =  new EasyShareBuiler("stage",merchantId,accessToken).addIsDeleted(false).addIsExpendable(true).build();
+       new EasyShare(easyshareObject).init(null);
