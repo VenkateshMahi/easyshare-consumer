@@ -32,7 +32,7 @@ Copy the bundle file from dist folder and then  all we have to do is place the t
        let easyshareObject =  new EasyShareBuiler("stage",merchantId,accessToken).addIsDeleted(false).addIsExpendable(true).build();
        
        new EasyShare(easyshareObject).init(null);
-addExpandable(true) -- enable the edit flow in the view
+addIsExpandable(true) -- enable the edit flow in the view
 
 addIsDeleted(false)  -- Only fetch active services and classes 
 
