@@ -81,7 +81,7 @@
 
  }
 
-global.EasyShareBuilder = EasyShareBuiler;
+global.EasyShareBuilder = EasyShareBuilder;
 export {
     EasyShareBuilder
 }
