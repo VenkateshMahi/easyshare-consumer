@@ -13,7 +13,7 @@
     
  }
  
- class  EasyShareBuiler{
+ class  EasyShareBuilder{
 
 
 
@@ -81,7 +81,7 @@
 
  }
 
-global.EasyShareBuiler = EasyShareBuiler;
+global.EasyShareBuilder = EasyShareBuiler;
 export {
-    EasyShareBuiler
+    EasyShareBuilder
 }

@@ -14,7 +14,7 @@
   let accessToken = "";
   let merchantId = "c64f2b10-1fa9-41a1-8ee7-831203b84d13";
 
- let easyshareObject =  new EasyShareBuiler("stage",merchantId,accessToken).addIsDeleted(false).addIsExpendable(true).build();
+ let easyshareObject =  new EasyShareBuilder("stage",merchantId,accessToken).addIsDeleted(false).addIsExpendable(true).build();
  new EasyShare(easyshareObject).init(null);
 
    </script>
