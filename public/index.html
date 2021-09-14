@@ -12,10 +12,11 @@
     
 
   let accessToken = "";
-  let merchantId = "c64f2b10-1fa9-41a1-8ee7-831203b84d13";
+  let merchantId = "";
 
- let easyshareObject =  new EasyShareBuilder("stage",merchantId,accessToken).addIsDeleted(false).addIsExpendable(true).build();
- new EasyShare(easyshareObject).init(null);
+  let easyshareObject =  new EasyShareBuilder("stage",merchantId,accessToken).addIsDeleted(false).addIsExpendable(true).build();
+   
+   new EasyShare(easyshareObject).init(null);
 
    </script>
 </body>
