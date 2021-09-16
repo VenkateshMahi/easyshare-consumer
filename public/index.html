@@ -11,10 +11,11 @@
    <script>
     
 
-  let accessToken = "";
-  let merchantId = "";
+  let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3N0YWdpbmctc2V0bW9yZS5mdWxsYXV0aC5jb20iLCJpYXQiOjE2MzE4MDUzMTEsInByb2pfaWQiOiJvbGQ6c2V0bW9yZSIsInR5cGUiOiJ1c2VyIiwic3ViIjoiNjk4MThhYWYtMThiZC00ODg0LWIxNjktM2MxZTA5ZmQ0NzdlIiwiZXhwIjoxNjMyNDEwMTExLCJqdGkiOiJkYmE1MjJ6Y1dobEVTZGNpIn0.gr17VR4h2P9WSE0Bz2eHPCoZ0tzH-pIOa8MrfDijt9g";
+  let merchantId = "69818aaf-18bd-4884-b169-3c1e09fd477e";
 
-  let easyshareObject =  new EasyShareBuilder("stage",merchantId,accessToken).addIsDeleted(false).addIsExpendable(true).build();
+  let easyshareObject =  new EasyShareBuilder("stage",merchantId,accessToken)
+  .addBrandId("0dab9518-34d4-4725-a847-ca7ff65168a2").addIsDeleted(false).addIsExpendable(true).build();
    
    new EasyShare(easyshareObject).init(null);
 

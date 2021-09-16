@@ -41,6 +41,8 @@ const liveUrl = "https://hook-dot-services-dot-schedulingengine.uc.r.appspot.com
         
         service_wrapper.setAttribute("merchandId",this.easyshareObject.merchatId);
         service_wrapper.setAttribute("myBooking",this.easyshareObject.myBooking);
+        service_wrapper.setAttribute("brandId",this.easyshareObject.brandId);
+
         service_wrapper.setAttribute("isExpendable",this.easyshareObject.isExpendable);
 
         if(element){
