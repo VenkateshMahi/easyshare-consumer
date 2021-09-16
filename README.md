@@ -1,20 +1,23 @@
 # easyshare-consumer
-
+   A Helper package for using Easyshare(Listing of meeting type) functioonality. 
 # Why  we need this repo 
   This repo has preconfigured webpack 5 with module federation.
   more on this can be found here. https://pravanjanpalai.medium.com/micro-frontends-create-and-share-using-webpack-module-federation-9d194840546a
  
  This configration help easyshare changes to directly refresh in consume side. 
- Example - Every time there is new change or bug fixes in easyshare the consumer has to deploy the same to 
+ Example - Eariler Everytime there is new change or bug fixes in easyshare the consumer has to deploy the same to 
  in their application to have those changes available. 
  
- By using this build files the consume does not have to deploy for new change.  Every new changes available in 
+ now By using this build files the consume does not have to deploy for new change.  Every new changes available in 
  easyshare  server  would automatically reflect on consumer side. 
  
+ 
+ # How its differnt from CDN 
+   This almost work same as CDN if we do not use webpack module federation. If your app is using webpack 5 or grater you can directly get the changes as a dynamic import. 
+ 
      
-}
-
-Why we created this - As we found most team do not use the latest version of webpack(greater than 5). This pacakge would help build a bundle file which internally 
+#Why we created this - 
+  As we found most team do not use the latest version of webpack(greater than 5). This pacakge would help build a bundle file which internally 
 pull the change from easyshare. 
 
 Steps to create bundle -- 
@@ -29,7 +32,7 @@ Copy the bundle file from dist folder and then  all we have to do is place the t
       let merchantId = "Your merchant id"
       let envirment = "live/stage". // whether we are deploying the build on staging or live.
 
-       let easyshareObject =  new EasyShareBuiler("stage",merchantId,accessToken).addIsDeleted(false).addIsExpendable(true).build();
+       let easyshareObject =  new EasyShareBuilder("stage",merchantId,accessToken).addIsDeleted(false).addIsExpendable(true).build();
        
        new EasyShare(easyshareObject).init(null);
 addIsExpandable(true) -- enable the edit flow in the view
