@@ -9,6 +9,7 @@
         this.cursor = builder.cursor || null;
         this.class= builder.class || true;
         this.isExpendable = builder.isExpendable || false;
+        this.brandId  = builder.brandId || "110003eb-76c1-4b81-a96a-4cdf91bf70fb"
     }
     
  }
@@ -47,6 +48,10 @@
         this.isExpendable = isExpendable;
         return this;
     }
+    addBrandId(brandId){
+        this.brandId = brandId;
+        return this;
+    }
     validate(props){
         if(this.hasOwnProperty(props) && this[props] == undefined){
             return true;
@@ -74,6 +79,10 @@
         }
         if(this.validate("isExpendable")){
             throw new Error("isExpendable parameter is missing")
+
+        }
+        if(this.validate("brandId")){
+            throw new Error("brandId parameter is missing")
 
         }
         return new EasyShare(this);

@@ -22,7 +22,7 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       remotes: {
-        easyshare: "easyshare@https://easysharestage.setmore.com/easyshare.js",
+        easyshare: "easyshare@https://https://easysharestage.setmore.com/easyshare.js",
       },
     }),
     new HtmlWebpackPlugin({
