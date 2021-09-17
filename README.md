@@ -32,8 +32,7 @@ Copy the bundle file from dist folder and then  all we have to do is place the t
       let merchantId = "Your merchant id"
       let envirment = "live/stage". // whether we are deploying the build on staging or live.
 
-       let easyshareObject =  new EasyShareBuilder("stage",merchantId,accessToken).addIsDeleted(false).addIsExpendable(true).build();
-       
+      let easyshareObject =  new EasyShareBuilder("stage",merchantId,accessToken).addBrandId("0dab9518-34d4-4725-a847-ca7ff65168a2").addIsDeleted(false).addIsExpendable(true).build();       
        new EasyShare(easyshareObject).init(null);
 addIsExpandable(true) -- enable the edit flow in the view
 
